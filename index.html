@@ -1,0 +1,28 @@
+<html>
+
+<head>
+ <meta charset="UTF-8" />
+</head>
+
+<body>
+ <div id="app">
+       This is a test
+       <!--Vue.js domain-->
+       <br> {{ message + "1234" }}
+    
+    <br> <span v-bind:title = "date">마우스를 가까이 가져오세요</span>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script>
+ const myApp = new Vue({
+ el: '#app',   
+ data: { 
+     message: 'Hello Vue!',
+       date: '오늘 날짜' + new Date().toLocaleString()
+ 
+            }
+        });
+ </script>
+</body>
+
+</html>
